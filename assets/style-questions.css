@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e7e7eb;
+}
+
+main {
+  margin-left: 6.5em;
+  margin-right: 6.5em;
+}
+
+img {
+  width: 150px;
+}
+
+.logo {
+  padding-top: 50px;
+  padding-bottom: 110px;
+  width: fit-content;
+}
+
+.titles h1,
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 0;
+  line-height: 4.7rem;
+}
+
+.titles {
+  padding-top: 10rem;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  color: #c2128d;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.questions-container {
+  text-align: center;
+}
+
+.questions-btn {
+  width: fit-content;
+}
+
+button {
+  display: inline-block;
+  width: 400px;
+  height: 100px;
+  border: 1px solid #eeeff1;
+}
