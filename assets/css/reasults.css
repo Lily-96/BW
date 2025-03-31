@@ -51,9 +51,46 @@ main {
   font-weight: 400;
 }
 .cake {
-  display: inline-block;
-  width: calc(100% / 33.33);
+  text-align: center;
+  padding: 20px;
 }
+
 .false {
-  margin-left: 190px;
+  font-family: "Outfit", sans-serif;
+  width: 33%;
+  display: inline-block;
+}
+.true {
+  font-family: "Outfit", sans-serif;
+  width: 33%;
+  display: inline-block;
+}
+.false h2 {
+  font-weight: 400;
+  font-size: 4rem;
+}
+.true h2 {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.donut {
+  width: 33%;
+  display: inline-block;
+}
+.rateUs {
+  text-align: center;
+}
+button {
+  cursor: pointer;
+  color: #e7e7eb;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  height: 70px;
+  width: 260px;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Outfit", sans-serif;
 }
