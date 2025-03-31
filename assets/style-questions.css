@@ -43,8 +43,8 @@ img {
 h2 {
   font-family: "Outfit", sans-serif;
   font-size: 5rem;
-  margin-bottom: 0;
   line-height: 4.7rem;
+  margin-bottom: 0;
 }
 
 .titles {
@@ -57,24 +57,32 @@ h1 {
   font-weight: 400;
 }
 
-h3 {
-  font-family: "Outfit", sans-serif;
-  color: #c2128d;
-  font-size: 2rem;
-  margin-bottom: 0;
+h2 {
+  margin-bottom: 40px;
 }
 
-.questions-container {
+#questions-container {
   text-align: center;
 }
 
-.questions-btn {
-  width: fit-content;
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+  cursor: pointer;
 }
 
 button {
+  margin: 15px;
   display: inline-block;
   width: 400px;
   height: 100px;
-  border: 1px solid #eeeff1;
+  border: 2px solid #eeeff1;
+  border-radius: 55px;
+  color: #eeeff1;
+  background-color: rgb(116 115 115 / 25%);
+}
+
+.correct-answer {
+  background-color: green;
 }
