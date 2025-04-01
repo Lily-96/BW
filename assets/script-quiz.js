@@ -89,18 +89,21 @@ const btn3 = document.querySelector(`.btn3`);
 const btn4 = document.querySelector(`.btn4`);
 
 let generalScore = 0;
+let questionNumber = 0;
 
-btn1.addEventListener(`click`, function () {
-  generalScore++;
+const question1 = () => {
+  btn1.addEventListener(`click`, function () {
+    generalScore++;
 
-  this.style.backgroundColor = `green`;
+    btn1.classList.add(`correct-answer`);
 
-  console.log("Score:", generalScore);
-});
-
-[btn2, btn3, btn4].forEach((btn) =>
-  btn.addEventListener(`click`, function () {
-    this.style.backgroundColor = `red`;
     console.log("Score:", generalScore);
-  })
-);
+  });
+
+  [btn2, btn3, btn4].forEach((btn) =>
+    btn.addEventListener(`click`, function () {
+      btn.classList.add(`wrong-answer`);
+      console.log("Score:", generalScore);
+    })
+  );
+};

@@ -72,6 +72,14 @@ h2 {
   cursor: pointer;
 }
 
+.btn1:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover {
+  background: rgb(196, 0, 143);
+  background: linear-gradient(rgba(196, 0, 143, 1) 0%, rgba(146, 0, 124, 1) 100%);
+}
+
 button {
   margin: 15px;
   display: inline-block;
@@ -85,4 +93,21 @@ button {
 
 .correct-answer {
   background-color: green;
+}
+
+.wrong-answer {
+  background-color: red;
+}
+
+.question-counter {
+  text-align: center;
+  padding-top: 7rem;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.bold-text {
+  font-weight: bold;
 }
