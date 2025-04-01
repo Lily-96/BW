@@ -95,13 +95,13 @@ button {
   font-size: 1.2rem;
   background-color: #01ffff;
   border: 1px solid #01ffff;
+  cursor: not-allowed;
 }
 
 button:hover {
   box-shadow: 0px 0px 12px 2px #01bdffbd;
 }
 
-button,
 input,
 label {
   cursor: pointer;
@@ -135,4 +135,19 @@ input[type="checkbox"]:checked::after {
 label {
   font-family: "Inter", sans-serif;
   font-weight: bold;
+}
+
+.unchecked {
+  background-color: #68caca;
+  cursor: not-allowed;
+}
+
+.enabled {
+  margin-left: 190px;
+  height: 60px;
+  width: 190px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #01ffff;
+  border: 1px solid #01ffff;
 }
