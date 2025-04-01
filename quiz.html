@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions Page</title>
+    <link rel="stylesheet" href="./assets/style-quiz.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="logo">
+        <img src="./img/epicode_logo.png" alt="logoEpicode" />
+      </div>
+      <div class="container">
+        <div class="timer-container">
+          <svg width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="50"></circle>
+            <circle class="circle" cx="75" cy="75" r="50"></circle>
+          </svg>
+          <div class="timer-text" id="timer">16</div>
+        </div>
+      </div>
+
+      <div class="titles">
+        <h1></h1>
+      </div>
+      <div id="questions-container">
+        <div class="questions-box">
+          <button class="btn1"></button>
+          <button class="btn2"></button>
+        </div>
+        <div class="questions-box">
+          <button class="btn3"></button>
+          <button class="btn4"></button>
+        </div>
+      </div>
+    </main>
+    <div class="question-counter">
+      <p>QUESTION <span class="score">1</span><span style="color: #b51289"> / 10</span></p>
+    </div>
+    <script src="./assets/script-quiz.js"></script>
+  </body>
+</html>
