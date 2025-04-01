@@ -97,7 +97,7 @@ const buttons = [btn1, btn2, btn3, btn4];
 
 const allQuestions = () => {
   if (questionNumber >= questions.length) {
-    window.location.href = "index.feedbackpage.html";
+    window.location.href = "index.results.html";
   }
 
   const question = questions[questionNumber];
