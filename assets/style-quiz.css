@@ -39,26 +39,18 @@ img {
   width: fit-content;
 }
 
-.titles h1,
-h2 {
+.titles h1 {
   font-family: "Outfit", sans-serif;
   font-size: 5rem;
   line-height: 4.7rem;
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .titles {
   padding-top: 10rem;
   padding-bottom: 50px;
   text-align: center;
-}
-
-h1 {
-  font-weight: 400;
-}
-
-h2 {
-  margin-bottom: 40px;
 }
 
 #questions-container {
@@ -89,6 +81,8 @@ button {
   border-radius: 55px;
   color: #eeeff1;
   background-color: rgb(116 115 115 / 25%);
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .correct-answer {
@@ -110,4 +104,8 @@ button {
 
 #bold-text {
   font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 5rem;
+  line-height: 4.7rem;
+  margin-bottom: 0;
 }
