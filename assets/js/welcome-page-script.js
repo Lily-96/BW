@@ -11,9 +11,9 @@ const proceed = () => {
       button.classList.add(`enabled`);
       button.disabled = false;
       button.style.cursor = `pointer`;
-      /* button.onclick = () => {
-      window.location.href = `quiz.html`;
-      }; */
+      button.onclick = () => {
+        window.location.href = `quiz.html`;
+      };
     }
   });
 };
