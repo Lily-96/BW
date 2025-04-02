@@ -41,8 +41,13 @@ button {
   font-weight: bold;
   font-size: 1.2rem;
   background-color: #01ffff;
-  filter: drop-shadow(0 0 25px #00ffff);
+
   border-style: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #00ffff;
+  filter: drop-shadow(0 0 25px #00ffff);
 }
 hr {
   width: 80%;
