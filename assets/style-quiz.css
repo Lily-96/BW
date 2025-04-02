@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e7e7eb;
+}
+
+main {
+  margin-left: 6.5em;
+  margin-right: 6.5em;
+}
+
+img {
+  width: 230px;
+}
+
+.logo {
+  display: inline-block;
+  padding-top: 50px;
+  padding-bottom: 110px;
+  width: fit-content;
+  position: absolute;
+  top: 30px;
+  left: 140px;
+}
+
+.titles h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 5rem;
+  line-height: 4.7rem;
+  margin-bottom: 0;
+  margin-top: 10rem;
+  font-weight: 400;
+}
+
+.titles {
+  padding-top: 10rem;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+#questions-container {
+  text-align: center;
+}
+
+button {
+  margin: 15px 20px;
+  display: inline-block;
+  width: 450px;
+  height: 85px;
+  border: 2px solid #eeeff1;
+  border-radius: 55px;
+  color: #eeeff1;
+  background-color: rgb(116 115 115 / 25%);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.hover:hover {
+  background: rgb(196, 0, 143);
+  background: linear-gradient(rgba(196, 0, 143, 1) 0%, rgba(146, 0, 124, 1) 100%);
+}
+
+.correct-answer {
+  background-color: green !important;
+}
+
+.wrong-answer {
+  background-color: red !important;
+}
+
+button.correct-answer:hover {
+  background-color: green;
+}
+
+button.wrong-answer:hover {
+  background-color: red;
+}
+
+.question-counter {
+  text-align: center;
+  padding-top: 7rem;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+#bold-text {
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 5rem;
+  line-height: 4.7rem;
+  margin-bottom: 0;
+}
+
+/* timer to fix */
+.container {
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  right: 140px;
+}
+
+.timer-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  font-family: "Outfit", sans-serif;
+}
+
+svg {
+  transform: rotate(-90deg); /* Questo fa partire il cerchio dall'alto */
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #896292;
+  stroke-width: 16;
+}
+
+.circle {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 16;
+  stroke-dasharray: 377; /* Circonferenza approssimativa */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55px;
+  color: white;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Stile e posizionamento per le parole "SECONDS" e "REMAINING" */
+.timer-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.seconds-label {
+  top: 27%;
+  font-weight: 300;
+}
+
+.remaining-label {
+  top: 65%;
+  font-weight: 200;
+}
