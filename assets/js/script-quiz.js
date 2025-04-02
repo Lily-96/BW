@@ -1,5 +1,3 @@
-import { easyQuestions, mediumQuestions, hardQuestions } from "./questions";
-
 const questionContainer = document.getElementById(`questions-container`);
 const buttonClass = document.getElementsByClassName(`question-btn`);
 const btn1 = document.querySelector(`.btn1`);
@@ -17,34 +15,43 @@ let timerInterval; // Salva l'intervallo per fermare il timer se necessario
 const buttons = [btn1, btn2, btn3, btn4];
 
 const allQuestions = () => {
-  if (questionNumber >= questions.length) {
+  if (questionNumber >= typeQuestion.length) {
     // window.location.href = ""; // Quando le domande finiscono, puoi fare qualcosa, come ricaricare la pagina.
     return;
   }
 
-  const question = questions[questionNumber];
+  let typeQuestions = [];
+  if (easyBtnClicked) {
+    typeQuestions.push(easyQuestions);
+  } else if (mediumBtnClicked) {
+    typeQuestions.push(mediumQuestions);
+  } else if (hardBtnClicked) {
+    typeQuestions.push(hardQuestions);
+  }
 
-  notBoldTitle.innerText = question.question;
+  const typeQuestion = typeQuestions[questionNumber];
+
+  notBoldTitle.innerText = typeQuestion.question;
 
   btn1.style.display = "inline-block";
   btn2.style.display = "inline-block";
   btn3.style.display = "inline-block";
   btn4.style.display = "inline-block";
 
-  let shuffledMultipleAnswers = [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5);
+  let shuffledMultipleAnswers = [...typeQuestion.incorrect_answers, typeQuestion.correct_answer].sort(() => Math.random() - 0.5);
 
-  if (question.type === "multiple") {
+  if (typeQuestion.type === "multiple") {
     buttons.forEach((btn, index) => {
       btn.innerText = shuffledMultipleAnswers[index];
       btn.classList.add(`hover`);
 
-      buttons.forEach((b) => (b.disabled = false));
+      buttons.forEach(b => (b.disabled = false));
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach((b) => (b.disabled = true));
+        buttons.forEach(b => (b.disabled = true));
 
-        if (btn.innerText === question.correct_answer) {
+        if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
           btn.classList.add("correct-answer");
           console.log("Risposta corretta! Score:", generalScore);
@@ -61,24 +68,24 @@ const allQuestions = () => {
         }, 1000);
       };
     });
-  } else if (question.type === "boolean") {
-    buttons.forEach((btn) => {
+  } else if (typeQuestion.type === "boolean") {
+    buttons.forEach(btn => {
       btn.classList.add(`hover`);
-      buttons.forEach((b) => (b.disabled = false));
+      buttons.forEach(b => (b.disabled = false));
 
-      if (question.correct_answer === `True`) {
-        btn1.innerText = question.correct_answer;
-        btn2.innerText = question.incorrect_answers;
-      } else if (question.incorrect_answers === `True`) {
-        btn1.innerText = question.incorrect_answers;
-        btn2.innerText = question.correct_answer;
+      if (typeQuestion.correct_answer === `True`) {
+        btn1.innerText = typeQuestion.correct_answer;
+        btn2.innerText = typeQuestion.incorrect_answers;
+      } else if (typeQuestion.incorrect_answers === `True`) {
+        btn1.innerText = typeQuestion.incorrect_answers;
+        btn2.innerText = typeQuestion.correct_answer;
       }
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach((b) => (b.disabled = true));
+        buttons.forEach(b => (b.disabled = true));
 
-        if (btn.innerText === question.correct_answer) {
+        if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
           btn.classList.add("correct-answer");
           console.log("Risposta corretta! Score:", generalScore);
