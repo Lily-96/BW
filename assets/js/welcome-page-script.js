@@ -1,6 +1,6 @@
 const proceed = () => {
   const checkBox = document.getElementById(`checkbox`);
-  const button = document.querySelector(`button`);
+  const button = document.querySelector(`.proceed-btn`);
 
   checkBox.addEventListener(`change`, function () {
     if (!checkBox.checked) {
