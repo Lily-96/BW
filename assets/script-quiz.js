@@ -1,6 +1,4 @@
-import { easyQuestions } from "./questions";
-import { mediumQuestions } from "./questions";
-import { hardQuestions } from "./questions";
+import { easyQuestions, mediumQuestions, hardQuestions } from "./questions";
 
 const questionContainer = document.getElementById(`questions-container`);
 const buttonClass = document.getElementsByClassName(`question-btn`);
