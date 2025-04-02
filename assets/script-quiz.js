@@ -168,23 +168,44 @@ const allQuestions = () => {
 
     btn3.style.display = "none";
     btn4.style.display = "none";
+
+    // Selezione degli elementi
+    const circle = document.querySelector(".circle");
+    const timerText = document.getElementById("timer");
+    const totalTime = 40; // Tempo totale in secondi
+    let timeLeft = totalTime; // Tempo rimanente
+
+    // Calcola la circonferenza del cerchio
+    const circumference = 2 * Math.PI * 70; // 2πr dove r=60
+
+    // Imposta il valore iniziale di stroke-dasharray
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = 0;
+
+    function updateTimer() {
+      if (timeLeft <= 0) {
+        timerText.textContent = "0";
+        circle.style.strokeDashoffset = circumference;
+        return;
+      }
+
+      // Aggiorna il testo del timer
+      timerText.textContent = timeLeft;
+
+      // Calcola il nuovo offset (in senso antiorario)
+      const offset = ((totalTime - timeLeft) / totalTime) * circumference;
+      circle.style.strokeDashoffset = -offset; // Usa valore negativo per andare in senso antiorario
+
+      // Decrementa il tempo rimanente
+      timeLeft--;
+
+      // Continua l'aggiornamento
+      setTimeout(updateTimer, 1000);
+    }
+
+    // Avvia il timer
+    updateTimer();
   }
 };
-
-let timeLeft = 40;
-const totalTime = 16;
-const circle = document.querySelector(".circle");
-const timerText = document.getElementById("timer");
-
-function updateTimer() {
-  timeLeft--;
-  const progress = (timeLeft / totalTime) * 314;
-  circle.style.strokeDashoffset = progress;
-  timerText.textContent = timeLeft;
-  if (timeLeft > 0) {
-    setTimeout(updateTimer, 1000);
-  }
-}
-setTimeout(updateTimer, 1000);
 
 allQuestions();

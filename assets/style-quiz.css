@@ -30,7 +30,7 @@ main {
 }
 
 img {
-  width: 200px;
+  width: 230px;
 }
 
 .logo {
@@ -40,7 +40,7 @@ img {
   width: fit-content;
   position: absolute;
   top: 30px;
-  left: 90px;
+  left: 140px;
 }
 
 .titles h1 {
@@ -120,38 +120,70 @@ button.wrong-answer:hover {
   text-align: right;
   position: absolute;
   top: 50px;
-  right: 50px;
+  right: 140px;
 }
 
 .timer-container {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 180px; /* Aumentato da 150px */
+  height: 180px; /* Aumentato da 150px */
   display: inline-block;
+  font-family: "Outfit", sans-serif;
 }
 
 svg {
-  transform: rotate(-90deg);
+  transform: rotate(-90deg); /* Questo fa partire il cerchio dall'alto */
 }
+
 .circle-bg {
   fill: none;
-  stroke: #555;
-  stroke-width: 10;
+  stroke: #896292;
+  stroke-width: 16;
 }
+
 .circle {
   fill: none;
-  stroke: #00c2ff;
-  stroke-width: 10;
-  stroke-dasharray: 314;
-  stroke-dashoffset: 314;
+  stroke: #00ffff;
+  stroke-width: 16;
+  stroke-dasharray: 377; /* Circonferenza approssimativa */
+  stroke-dashoffset: 0;
   transition: stroke-dashoffset 0.1s linear;
 }
+
+/* Posizionamento del timer numerico */
 .timer-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 55px; /* Aumentato da 50px */
   color: white;
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Stile e posizionamento per le parole "SECONDS" e "REMAINING" */
+.timer-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+/* Potrebbe essere necessario regolare le posizioni delle etichette */
+.seconds-label {
+  top: 27%; /* Regolato leggermente per adattarsi alle nuove dimensioni */
+  font-weight: 300;
+}
+
+.remaining-label {
+  top: 65%; /* Regolato leggermente per adattarsi alle nuove dimensioni */
+  font-weight: 200;
 }
