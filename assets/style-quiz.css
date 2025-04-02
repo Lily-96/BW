@@ -125,8 +125,8 @@ button.wrong-answer:hover {
 
 .timer-container {
   position: relative;
-  width: 180px; /* Aumentato da 150px */
-  height: 180px; /* Aumentato da 150px */
+  width: 180px;
+  height: 180px;
   display: inline-block;
   font-family: "Outfit", sans-serif;
 }
@@ -150,13 +150,12 @@ svg {
   transition: stroke-dashoffset 0.1s linear;
 }
 
-/* Posizionamento del timer numerico */
 .timer-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 55px; /* Aumentato da 50px */
+  font-size: 55px;
   color: white;
   margin: 0;
   font-weight: 400;
@@ -177,13 +176,12 @@ svg {
   text-align: center;
 }
 
-/* Potrebbe essere necessario regolare le posizioni delle etichette */
 .seconds-label {
-  top: 27%; /* Regolato leggermente per adattarsi alle nuove dimensioni */
+  top: 27%;
   font-weight: 300;
 }
 
 .remaining-label {
-  top: 65%; /* Regolato leggermente per adattarsi alle nuove dimensioni */
+  top: 65%;
   font-weight: 200;
 }
