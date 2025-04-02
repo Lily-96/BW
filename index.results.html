@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Assets/css/reasults.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Result Page</title>
   </head>
   <body>
-    <main>
+    <script src="assets/JavaSript/results_script.js"></script>
+    <main class=>
       <div class="logo">
         <img src="./img/epicode_logo.png" alt="logoEpicode" />
       </div>
@@ -15,20 +17,32 @@
         <h1>Results</h1>
         <h3>The summary of your answers:</h3>
       </div>
-      <div class="cake">
-        <div class="true">
-          <h2>Correct</h2>
+      <div class="container" id="container">
+        <div class="results" id="results">
+          <div class="true">
+            <!-- CORRECT -->
+            <h2>Correct</h2>
+            <h3 id="correct-percentage">0%</h3>
+            <p id="correct-answers">0/6 questions</p>
+          </div>
+          <!-- CIRCLE -->
+          <div class="chart-container">
+            <canvas id="resultChart"></canvas>
+          </div>
+           <div class="respose" >
+           <!--  <p class="congratulations">congratualtion! asda dadsdas sfasdfadas afsdfsadfas</p> -->
+          </div>
+          <!-- WRONG -->
+          <div class="false">
+            <h2>Wrong</h2>
+            <h3 id="wrong-percentage">0%</h3>
+            <p id="wrong-answers">0/6 questions</p>
+          </div>
         </div>
-        <div class="donut">
-          <p class="congratulations">congratualtion!</p>
-        </div>
-        <div class="false">
-          <h2>Wrong</h2>
-        </div>
-      </div>
 
-      <div class="rateUs">
-        <button>RATE US</button>
+        <div class="rateUs">
+          <button>RATE US</button>
+        </div>
       </div>
     </main>
   </body>
