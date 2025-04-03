@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const length = localStorage.getItem(`length`);
+  console.log(length);
+
+  const finalScore = localStorage.getItem(`finalScore`);
+  console.log(finalScore);
+
   /*  Dati del test */
-  const totalQuestions = 20;
-  const correctAnswers = 15;
+  const totalQuestions = parseInt(length);
+  const correctAnswers = parseInt(finalScore);
   const wrongAnswers = totalQuestions - correctAnswers;
 
   const correctPercentage = (correctAnswers / totalQuestions) * 100;
   const wrongPercentage = 100 - correctPercentage;
   const PASS_THRESHOLD = 60;
+
+  const rateUs = document.querySelector(".rateUs");
 
   /* Animazione iniziale del contenitore */
   function showContainer() {
@@ -106,4 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Avviare tutto */
   showContainer();
   createChart();
+  rateUs.addEventListener("click", function () {
+    window.location.href = "index.feedbackpage.html";
+  });
 });

@@ -67,7 +67,7 @@ console.log(typeQuestions);
 
 const allQuestions = () => {
   if (questionNumber >= typeQuestions.length) {
-    window.location.href = "QUIZ-App_Requirements.html"; // Quando le domande finiscono, puoi fare qualcosa, come ricaricare la pagina.
+    window.location.href = "index.results.html";
     return;
   }
   const typeQuestion = typeQuestions[questionNumber];
@@ -128,6 +128,7 @@ const allQuestions = () => {
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
+          localStorage.setItem(`finalScore`, generalScore);
           btn.classList.add("correct-answer");
           console.log("Risposta corretta! Score:", generalScore);
         } else {
