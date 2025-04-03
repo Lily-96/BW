@@ -35,7 +35,7 @@ img {
 
 .logo {
   padding-top: 50px;
-  padding-bottom: 110px;
+  padding-bottom: 50px;
 }
 
 .titles h1,
@@ -69,6 +69,10 @@ h3 {
 
 .highlighted {
   font-weight: 700;
+}
+
+.footer {
+  margin-top: 70px;
 }
 
 ul {

@@ -12,6 +12,7 @@ const btn3 = document.querySelector(`.btn3`);
 const btn4 = document.querySelector(`.btn4`);
 const notBoldTitle = document.querySelector(`h1`);
 const spanScore = document.querySelector(`.score`);
+const numberOfQuestions = document.querySelector(`.number-q`);
 
 let generalScore = 0;
 let questionNumber = 0;
@@ -22,20 +23,41 @@ const buttons = [btn1, btn2, btn3, btn4];
 
 let typeQuestions = [];
 
-if (difficulty === `easy`) {
+if (difficulty === `easy` && length === `10`) {
   typeQuestions = easyQuestions.slice(0, 10);
+  numberOfQuestions.innerText = " / 10";
   console.log(typeQuestions);
-} else if (difficulty === `easy` && length === 20) {
+} else if (difficulty === `easy` && length === `20`) {
   typeQuestions = easyQuestions.slice(0, 20);
+  numberOfQuestions.innerText = " / 20";
   console.log(typeQuestions);
-} else if (difficulty === `easy` && length === 30) {
+} else if (difficulty === `easy` && length === `30`) {
   typeQuestions = easyQuestions;
+  numberOfQuestions.innerText = " / 30";
   console.log(typeQuestions);
-} else if (difficulty === `medium`) {
+} else if (difficulty === `medium` && length === `10`) {
+  typeQuestions = mediumQuestions.slice(0, 10);
+  numberOfQuestions.innerText = " / 10";
+  console.log(typeQuestions);
+} else if (difficulty === `medium` && length === `20`) {
+  typeQuestions = mediumQuestions.slice(0, 20);
+  numberOfQuestions.innerText = " / 20";
+  console.log(typeQuestions);
+} else if (difficulty === `medium` && length === `30`) {
   typeQuestions = mediumQuestions;
+  numberOfQuestions.innerText = " / 30";
   console.log(typeQuestions);
-} else if (difficulty === `hard`) {
+} else if (difficulty === `hard` && length === `10`) {
+  typeQuestions = hardQuestions.slice(0, 10);
+  numberOfQuestions.innerText = " / 10";
+  console.log(typeQuestions);
+} else if (difficulty === `hard` && length === `20`) {
+  typeQuestions = hardQuestions.slice(0, 20);
+  numberOfQuestions.innerText = " / 20";
+  console.log(typeQuestions);
+} else if (difficulty === `hard` && length === `30`) {
   typeQuestions = hardQuestions;
+  numberOfQuestions.innerText = " / 30";
   console.log(typeQuestions);
 } else {
   typeQuestions = easyQuestions;

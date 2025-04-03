@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.style.cursor = `pointer`;
         button.onclick = () => {
           window.location.href = `quiz.html`;
+          checkBox.checked = false;
         };
       }
     });
