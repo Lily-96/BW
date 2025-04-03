@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem(`difficulty`, `hard`);
   });
 
+  // proceed-btn
   const proceed = () => {
     const checkBox = document.getElementById(`checkbox`);
     const button = document.querySelector(`.proceed-btn`);

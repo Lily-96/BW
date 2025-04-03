@@ -18,19 +18,25 @@ let timerInterval; // Salva l'intervallo per fermare il timer se necessario
 const buttons = [btn1, btn2, btn3, btn4];
 
 let typeQuestions = [];
+
 if (difficulty === `easy`) {
-  typeQuestions.push(easyQuestions);
+  typeQuestions = easyQuestions;
+  console.log(typeQuestions);
 } else if (difficulty === `medium`) {
-  typeQuestions.push(mediumQuestions);
+  typeQuestions = mediumQuestions;
+  console.log(typeQuestions);
 } else if (difficulty === `hard`) {
-  typeQuestions.push(hardQuestions);
+  typeQuestions = hardQuestions;
+  console.log(typeQuestions);
+} else {
+  typeQuestions = easyQuestions;
 }
+
 const allQuestions = () => {
-  if (questionNumber >= typeQuestion.length) {
-    // window.location.href = ""; // Quando le domande finiscono, puoi fare qualcosa, come ricaricare la pagina.
+  if (questionNumber >= typeQuestions.length) {
+    window.location.href = "QUIZ-App_Requirements.html"; // Quando le domande finiscono, puoi fare qualcosa, come ricaricare la pagina.
     return;
   }
-
   const typeQuestion = typeQuestions[questionNumber];
 
   notBoldTitle.innerText = typeQuestion.question;
@@ -108,7 +114,6 @@ const allQuestions = () => {
     btn3.style.display = "none";
     btn4.style.display = "none";
   }
-
   updateTimer(); // Avvia il timer per la domanda corrente
 };
 
@@ -159,5 +164,4 @@ function updateTimer() {
   timerInterval = setInterval(update, 1000);
   update();
 }
-
 allQuestions(); // Avvia il quiz con la prima domanda
