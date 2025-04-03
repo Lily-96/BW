@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const length10 = document.querySelector(".length-btn10");
   const length20 = document.querySelector(".length-btn20");
   const length30 = document.querySelector(".length-btn30");
+  const change = document.querySelector(".change");
 
   easyBtn.addEventListener("click", function () {
     easyBtn.classList.add("selected");
@@ -32,18 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
     length20.classList.remove("selected2");
     length30.classList.remove("selected2");
     localStorage.setItem(`length`, 10);
+    change.innerText = "0-5 minutes.";
   });
   length20.addEventListener("click", function () {
     length20.classList.add("selected2");
     length10.classList.remove("selected2");
     length30.classList.remove("selected2");
     localStorage.setItem(`length`, 20);
+    change.innerText = "10-15 minutes.";
   });
   length30.addEventListener("click", function () {
     length30.classList.add("selected2");
     length10.classList.remove("selected2");
     length20.classList.remove("selected2");
     localStorage.setItem(`length`, 30);
+    change.innerText = "15-20 minutes.";
   });
 
   const proceed = () => {
