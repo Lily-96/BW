@@ -3,22 +3,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const mediumBtn = document.querySelector(".medium-btn");
   const hardBtn = document.querySelector(".hard-btn");
 
-  let whichButton = "";
-
   easyBtn.addEventListener("click", function () {
-    whichButton = "easy";
     easyBtn.classList.add("selected");
-    console.log("selezionato", easyBtn);
+    mediumBtn.classList.remove(`selected`);
+    hardBtn.classList.remove(`selected`);
   });
 
   mediumBtn.addEventListener("click", function () {
-    whichButton = "medium";
     mediumBtn.classList.add("selected");
+    easyBtn.classList.remove("selected");
+    hardBtn.classList.remove(`selected`);
   });
 
   hardBtn.addEventListener("click", function () {
-    whichButton = "hard";
     hardBtn.classList.add("selected");
+    mediumBtn.classList.remove("selected");
+    easyBtn.classList.remove("selected");
   });
 
   const proceed = () => {

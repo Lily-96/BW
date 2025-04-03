@@ -41,7 +41,7 @@ img {
 .titles h1,
 h2 {
   font-family: "Outfit", sans-serif;
-  font-size: 5rem;
+  font-size: 60px;
   margin-bottom: 0;
   line-height: 3.7rem;
 }
@@ -57,18 +57,18 @@ h1 {
 h3 {
   font-family: "Outfit", sans-serif;
   color: #c2128d;
-  font-size: 2rem;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
 .instructions {
   font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .highlighted {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 ul {
@@ -91,11 +91,13 @@ ul {
   margin-left: 190px;
   height: 60px;
   width: 190px;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1.2rem;
+  letter-spacing: 0.5px;
   background-color: #01ffff;
   border: 1px solid #01ffff;
   cursor: not-allowed;
+  font-family: "Inter", sans-serif;
 }
 
 .proceed-btn:hover {
@@ -119,6 +121,7 @@ ul {
   font-weight: 600;
   font-size: 1.2rem;
   color: #e7e7eb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .easy-btn {
@@ -138,13 +141,7 @@ ul {
 .hard-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.easy-btn.selected,
-.medium-btn.selected,
-.hard-btn.selected {
   border-color: #ff3ebb;
-  box-shadow: 0 0 15px rgba(255, 62, 187, 0.5);
 }
 
 .easy-btn.selected {
@@ -182,8 +179,13 @@ input {
   cursor: pointer;
 }
 
+#checkbox-label {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
 input[type="checkbox"] {
-  -webkit-appearance: none;
+  font-family: "Inter", sans-serif;
   appearance: none;
   width: 20px;
   height: 20px;
