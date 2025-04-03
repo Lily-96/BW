@@ -21,7 +21,6 @@ body {
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: center;
   background-attachment: fixed;
   color: #e7e7eb;
   width: 100%;
@@ -33,34 +32,33 @@ img {
 
 .logo {
   text-align: left;
-  padding-left: 100px;
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 main {
   text-align: center;
-  padding-inline: 100px;
   width: 100%;
+  padding: 100px 200px;
 }
 .title {
   text-align: center;
   font-family: "Outfit", sans-serif;
 }
 .title h1 {
-  font-size: 5rem;
+  font-size: 65px;
   margin-bottom: 0;
   line-height: 3.7rem;
   margin-bottom: 1rem;
 }
 .title h3 {
-  font-size: 2.5rem;
+  font-size: 65px;
   font-weight: 400;
+  margin: 0;
 }
 /* sezzioni prcentuale % */
 .false {
   line-height: 65px;
   text-align: center;
-  padding-inline: 10rem;
+
   font-family: "Outfit", sans-serif;
   width: 33%;
   display: inline-block;
@@ -69,8 +67,7 @@ main {
 .true {
   line-height: 65px;
   text-align: center;
-  padding-right: 10rem;
-  padding-left: 10rem;
+
   font-family: "Outfit", sans-serif;
   width: 33%;
   display: inline-block;
@@ -79,12 +76,12 @@ main {
 .false h2 {
   margin: 0;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 65px;
 }
 .true h2 {
   margin: 0;
   font-weight: 400;
-  font-size: 4.5rem;
+  font-size: 65px;
 }
 .results {
   text-align: center;
@@ -107,6 +104,7 @@ main {
 }
 /* Contenitore centrale */
 .container #container {
+  width: 100%;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 1s ease-out;
