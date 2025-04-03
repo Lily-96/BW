@@ -29,6 +29,7 @@ img {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-inline: 50px;
+  margin-left: 140px;
 }
 main {
   text-align: center;
@@ -41,7 +42,7 @@ button {
   font-weight: bold;
   font-size: 1.2rem;
   background-color: #01ffff;
-
+  margin-top: 60px;
   border-style: none;
   cursor: pointer;
 }
@@ -50,13 +51,14 @@ button:hover {
   filter: drop-shadow(0 0 25px #00ffff);
 }
 hr {
-  width: 80%;
+  width: 70%;
   border: solid 1px;
   border: 1;
   color: #bd128a;
 }
 h1 {
-  font-size: 4.2rem;
+  font-size: 60px;
+  font-family: "outfit", sans-serif;
   margin-bottom: 0;
   line-height: 3.7rem;
   margin-bottom: 1.2rem;
@@ -103,5 +105,9 @@ textarea {
 
 .write {
   text-align: left;
-  padding-left: 152px;
+  padding-inline: 115px;
+  width: 100%;
+}
+#more {
+  margin-top: 10px;
 }
