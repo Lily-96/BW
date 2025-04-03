@@ -190,5 +190,5 @@ button {
 button:hover {
   background-color: #00ffff;
   filter: drop-shadow(0 0 25px #00ffff);
-  color: rgb(255, 255, 255);
+  color: #53176e;
 }
