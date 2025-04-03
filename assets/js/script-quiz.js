@@ -1,6 +1,9 @@
 const difficulty = localStorage.getItem(`difficulty`);
 console.log(difficulty);
 
+const length = localStorage.getItem(`length`);
+console.log(length);
+
 const questionContainer = document.getElementById(`questions-container`);
 const buttonClass = document.getElementsByClassName(`question-btn`);
 const btn1 = document.querySelector(`.btn1`);
@@ -20,6 +23,12 @@ const buttons = [btn1, btn2, btn3, btn4];
 let typeQuestions = [];
 
 if (difficulty === `easy`) {
+  typeQuestions = easyQuestions.slice(0, 10);
+  console.log(typeQuestions);
+} else if (difficulty === `easy` && length === 20) {
+  typeQuestions = easyQuestions.slice(0, 20);
+  console.log(typeQuestions);
+} else if (difficulty === `easy` && length === 30) {
   typeQuestions = easyQuestions;
   console.log(typeQuestions);
 } else if (difficulty === `medium`) {
@@ -31,6 +40,8 @@ if (difficulty === `easy`) {
 } else {
   typeQuestions = easyQuestions;
 }
+
+console.log(typeQuestions);
 
 const allQuestions = () => {
   if (questionNumber >= typeQuestions.length) {
@@ -53,11 +64,11 @@ const allQuestions = () => {
       btn.innerText = shuffledMultipleAnswers[index];
       btn.classList.add(`hover`);
 
-      buttons.forEach((b) => (b.disabled = false));
+      buttons.forEach(b => (b.disabled = false));
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach((b) => (b.disabled = true));
+        buttons.forEach(b => (b.disabled = true));
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
@@ -77,9 +88,9 @@ const allQuestions = () => {
       };
     });
   } else if (typeQuestion.type === "boolean") {
-    buttons.forEach((btn) => {
+    buttons.forEach(btn => {
       btn.classList.add(`hover`);
-      buttons.forEach((b) => (b.disabled = false));
+      buttons.forEach(b => (b.disabled = false));
 
       if (typeQuestion.correct_answer === `True`) {
         btn1.innerText = typeQuestion.correct_answer;
@@ -91,7 +102,7 @@ const allQuestions = () => {
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach((b) => (b.disabled = true));
+        buttons.forEach(b => (b.disabled = true));
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;

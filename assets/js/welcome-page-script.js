@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const easyBtn = document.querySelector(".easy-btn");
   const mediumBtn = document.querySelector(".medium-btn");
   const hardBtn = document.querySelector(".hard-btn");
+  const length10 = document.querySelector(".length-btn10");
+  const length20 = document.querySelector(".length-btn20");
+  const length30 = document.querySelector(".length-btn30");
 
   easyBtn.addEventListener("click", function () {
     easyBtn.classList.add("selected");
@@ -24,7 +27,25 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem(`difficulty`, `hard`);
   });
 
-  // proceed-btn
+  length10.addEventListener("click", function () {
+    length10.classList.add("selected2");
+    length20.classList.remove("selected2");
+    length30.classList.remove("selected2");
+    localStorage.setItem(`length`, 10);
+  });
+  length20.addEventListener("click", function () {
+    length20.classList.add("selected2");
+    length10.classList.remove("selected2");
+    length30.classList.remove("selected2");
+    localStorage.setItem(`length`, 20);
+  });
+  length30.addEventListener("click", function () {
+    length30.classList.add("selected2");
+    length10.classList.remove("selected2");
+    length20.classList.remove("selected2");
+    localStorage.setItem(`length`, 30);
+  });
+
   const proceed = () => {
     const checkBox = document.getElementById(`checkbox`);
     const button = document.querySelector(`.proceed-btn`);

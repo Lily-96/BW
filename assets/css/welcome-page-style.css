@@ -126,37 +126,45 @@ ul {
 
 .easy-btn {
   background: linear-gradient(135deg, rgba(0, 200, 83, 0.2), rgba(0, 200, 83, 0.05));
+  transition: all 0.2s ease-in-out;
 }
 
 .medium-btn {
   background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 193, 7, 0.05));
+  transition: all 0.2s ease-in-out;
 }
 
 .hard-btn {
   background: linear-gradient(135deg, rgba(244, 67, 54, 0.2), rgba(244, 67, 54, 0.05));
+  transition: all 0.2s ease-in-out;
 }
 
-.easy-btn:hover,
-.medium-btn:hover,
+.easy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(231, 69, 155, 0.7);
+}
+.medium-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(231, 69, 155, 0.7);
+}
 .hard-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-color: #ff3ebb;
+  box-shadow: 0 0 15px rgba(231, 69, 155, 0.7);
 }
 
 .easy-btn.selected {
   border-color: #00c853;
-  box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
+  box-shadow: 0 0 15px rgba(0, 200, 83, 1);
 }
 
 .medium-btn.selected {
   border-color: #ffc107;
-  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 1);
 }
 
 .hard-btn.selected {
   border-color: #f44336;
-  box-shadow: 0 0 15px rgba(244, 67, 54, 0.5);
+  box-shadow: 0 0 15px rgba(244, 67, 54, 1);
 }
 
 label.easy-btn,
@@ -182,6 +190,50 @@ input {
 #checkbox-label {
   font-weight: 700;
   font-family: "Inter", sans-serif;
+}
+
+.length-btn10,
+.length-btn20,
+.length-btn30 {
+  display: inline-block;
+  height: 60px;
+  width: 190px;
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #e7e7eb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #1d2145 0%, rgba(231, 69, 155, 0.25) 100%);
+  border: 1px solid rgba(231, 69, 155, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.length-btn10:hover,
+.length-btn20:hover,
+.length-btn30:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #1d2145 0%, rgba(231, 69, 155, 0.4) 100%);
+  box-shadow: 0 0 15px rgba(231, 69, 155, 0.7);
+}
+
+label.length-btn10,
+label.length-btn20,
+label.length-btn30 {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  line-height: 55px;
+}
+
+.length-btn10.selected2,
+.length-btn20.selected2,
+.length-btn30.selected2 {
+  border-color: #b61ded;
+  box-shadow: 0 0 15px #0051ff;
 }
 
 input[type="checkbox"] {
