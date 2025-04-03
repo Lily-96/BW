@@ -33,6 +33,7 @@ img {
 
 .logo {
   text-align: left;
+  padding-left: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -130,18 +131,40 @@ canvas {
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+  filter: drop-shadow(2px 4px 6px rgba(7, 7, 7, 0.803));
 }
 .resultChart {
   width: 33%;
   display: inline-block;
 }
-.respose {
-  min-width: auto;
-  max-width: 280px;
+#exam-result-container {
   position: absolute;
-  top: 38%;
+  width: 100%;
+  height: 100%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.response {
+  font-family: "Outfit", sans-serif;
+  overflow-wrap: break-word;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.response h5 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.response h6 {
+  color: #00f2ff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.response p {
+  line-height: 1.5rem;
 }
 
 button {
@@ -158,6 +181,7 @@ button {
   transition: opacity 1s ease-out 1.5s;
 }
 button:hover {
-  background-color: white;
-  color: black;
+  background-color: #00ffff;
+  filter: drop-shadow(0 0 25px #00ffff);
+  color: rgb(255, 255, 255);
 }

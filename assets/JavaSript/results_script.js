@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   /*  Dati del test */
-  const totalQuestions = 10;
-  const correctAnswers = 5;
+  const totalQuestions = 20;
+  const correctAnswers = 15;
   const wrongAnswers = totalQuestions - correctAnswers;
 
   const correctPercentage = (correctAnswers / totalQuestions) * 100;
   const wrongPercentage = 100 - correctPercentage;
+  const PASS_THRESHOLD = 60;
 
   /* Animazione iniziale del contenitore */
   function showContainer() {
@@ -14,13 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   /*  Funzione per mostrare il risultato del test */
   function showTestResult() {
-    const resultElement = document.getElementsByClassName("respose");
-    const PASS_THRESHOLD = 60;
+    const resultElement = document.querySelector(".response");
 
     if (correctPercentage >= PASS_THRESHOLD) {
-      resultElement.textContent = "Congratulations! You passed the test!";
+      resultElement.innerHTML = `
+      <h5>Congratulation!</h5>
+      <h6>You passed the exam.</h6>
+      <p>We'll send you the certificate in few minutes. Check your email (includingpromotions / spam folder) </p>`;
     } else {
-      resultElement.textContent = "Sorry, you didn't pass. Try again!";
+      resultElement.innerHTML = `
+      <h6>Test Failed.</h6>
+      <h5>Go study again!</h5>`;
     }
   }
 
@@ -68,12 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
       new Chart(ctx, {
         type: "doughnut",
         data: {
-          labels: ["Correct", "Wrong"],
+          labels: ["Wrong", "Correct"],
           datasets: [
             {
-              data: [correctPercentage, wrongPercentage],
-              backgroundColor: ["#00f2ff", "#e6007a"],
-              hoverBackgroundColor: ["#00c2cc", "#b3005f"],
+              data: [wrongPercentage, correctPercentage],
+              backgroundColor: ["#e6007a", "#00f2ff"],
+              hoverBackgroundColor: ["#b3005f", "#00c2cc"],
               borderWidth: 0,
             },
           ],
