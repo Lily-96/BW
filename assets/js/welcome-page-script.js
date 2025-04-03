@@ -7,18 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
     easyBtn.classList.add("selected");
     mediumBtn.classList.remove(`selected`);
     hardBtn.classList.remove(`selected`);
+    localStorage.setItem(`difficulty`, `easy`);
   });
 
   mediumBtn.addEventListener("click", function () {
     mediumBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
     hardBtn.classList.remove(`selected`);
+    localStorage.setItem(`difficulty`, `medium`);
   });
 
   hardBtn.addEventListener("click", function () {
     hardBtn.classList.add("selected");
     mediumBtn.classList.remove("selected");
     easyBtn.classList.remove("selected");
+    localStorage.setItem(`difficulty`, `hard`);
   });
 
   const proceed = () => {

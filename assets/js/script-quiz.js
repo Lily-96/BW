@@ -1,3 +1,6 @@
+const difficulty = localStorage.getItem(`difficulty`);
+console.log(difficulty);
+
 const questionContainer = document.getElementById(`questions-container`);
 const buttonClass = document.getElementsByClassName(`question-btn`);
 const btn1 = document.querySelector(`.btn1`);
@@ -14,19 +17,18 @@ let timerInterval; // Salva l'intervallo per fermare il timer se necessario
 
 const buttons = [btn1, btn2, btn3, btn4];
 
+let typeQuestions = [];
+if (difficulty === `easy`) {
+  typeQuestions.push(easyQuestions);
+} else if (difficulty === `medium`) {
+  typeQuestions.push(mediumQuestions);
+} else if (difficulty === `hard`) {
+  typeQuestions.push(hardQuestions);
+}
 const allQuestions = () => {
   if (questionNumber >= typeQuestion.length) {
     // window.location.href = ""; // Quando le domande finiscono, puoi fare qualcosa, come ricaricare la pagina.
     return;
-  }
-
-  let typeQuestions = [];
-  if (easyBtnClicked) {
-    typeQuestions.push(easyQuestions);
-  } else if (mediumBtnClicked) {
-    typeQuestions.push(mediumQuestions);
-  } else if (hardBtnClicked) {
-    typeQuestions.push(hardQuestions);
   }
 
   const typeQuestion = typeQuestions[questionNumber];
@@ -45,11 +47,11 @@ const allQuestions = () => {
       btn.innerText = shuffledMultipleAnswers[index];
       btn.classList.add(`hover`);
 
-      buttons.forEach(b => (b.disabled = false));
+      buttons.forEach((b) => (b.disabled = false));
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach(b => (b.disabled = true));
+        buttons.forEach((b) => (b.disabled = true));
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
@@ -69,9 +71,9 @@ const allQuestions = () => {
       };
     });
   } else if (typeQuestion.type === "boolean") {
-    buttons.forEach(btn => {
+    buttons.forEach((btn) => {
       btn.classList.add(`hover`);
-      buttons.forEach(b => (b.disabled = false));
+      buttons.forEach((b) => (b.disabled = false));
 
       if (typeQuestion.correct_answer === `True`) {
         btn1.innerText = typeQuestion.correct_answer;
@@ -83,7 +85,7 @@ const allQuestions = () => {
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach(b => (b.disabled = true));
+        buttons.forEach((b) => (b.disabled = true));
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
