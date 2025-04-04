@@ -1,8 +1,8 @@
 const difficulty = localStorage.getItem(`difficulty`);
-console.log(difficulty);
+console.log(`Difficulty:`, difficulty);
 
 const length = localStorage.getItem(`length`);
-console.log(length);
+console.log(`Questions Length:`, length);
 
 const questionContainer = document.getElementById(`questions-container`);
 const buttonClass = document.getElementsByClassName(`question-btn`);
@@ -26,39 +26,30 @@ let typeQuestions = [];
 if (difficulty === `easy` && length === `10`) {
   typeQuestions = easyQuestions.slice(0, 10);
   numberOfQuestions.innerText = " / 10";
-  console.log(typeQuestions);
 } else if (difficulty === `easy` && length === `20`) {
   typeQuestions = easyQuestions.slice(0, 20);
   numberOfQuestions.innerText = " / 20";
-  console.log(typeQuestions);
 } else if (difficulty === `easy` && length === `30`) {
   typeQuestions = easyQuestions;
   numberOfQuestions.innerText = " / 30";
-  console.log(typeQuestions);
 } else if (difficulty === `medium` && length === `10`) {
   typeQuestions = mediumQuestions.slice(0, 10);
   numberOfQuestions.innerText = " / 10";
-  console.log(typeQuestions);
 } else if (difficulty === `medium` && length === `20`) {
   typeQuestions = mediumQuestions.slice(0, 20);
   numberOfQuestions.innerText = " / 20";
-  console.log(typeQuestions);
 } else if (difficulty === `medium` && length === `30`) {
   typeQuestions = mediumQuestions;
   numberOfQuestions.innerText = " / 30";
-  console.log(typeQuestions);
 } else if (difficulty === `hard` && length === `10`) {
   typeQuestions = hardQuestions.slice(0, 10);
   numberOfQuestions.innerText = " / 10";
-  console.log(typeQuestions);
 } else if (difficulty === `hard` && length === `20`) {
   typeQuestions = hardQuestions.slice(0, 20);
   numberOfQuestions.innerText = " / 20";
-  console.log(typeQuestions);
 } else if (difficulty === `hard` && length === `30`) {
   typeQuestions = hardQuestions;
   numberOfQuestions.innerText = " / 30";
-  console.log(typeQuestions);
 } else {
   typeQuestions = easyQuestions;
 }
@@ -86,19 +77,19 @@ const allQuestions = () => {
       btn.innerText = shuffledMultipleAnswers[index];
       btn.classList.add(`hover`);
 
-      buttons.forEach(b => (b.disabled = false));
+      buttons.forEach((b) => (b.disabled = false));
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach(b => (b.disabled = true));
+        buttons.forEach((b) => (b.disabled = true));
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
           btn.classList.add("correct-answer");
-          console.log("Risposta corretta! Score:", generalScore);
+          console.log("Correct Answer! Score:", generalScore);
         } else {
           btn.classList.add("wrong-answer");
-          console.log("Risposta sbagliata! Score:", generalScore);
+          console.log("Wrong Answer! Score:", generalScore);
         }
 
         setTimeout(() => {
@@ -110,9 +101,9 @@ const allQuestions = () => {
       };
     });
   } else if (typeQuestion.type === "boolean") {
-    buttons.forEach(btn => {
+    buttons.forEach((btn) => {
       btn.classList.add(`hover`);
-      buttons.forEach(b => (b.disabled = false));
+      buttons.forEach((b) => (b.disabled = false));
 
       if (typeQuestion.correct_answer === `True`) {
         btn1.innerText = typeQuestion.correct_answer;
@@ -124,7 +115,7 @@ const allQuestions = () => {
 
       btn.onclick = () => {
         btn.classList.remove(`hover`);
-        buttons.forEach(b => (b.disabled = true));
+        buttons.forEach((b) => (b.disabled = true));
 
         if (btn.innerText === typeQuestion.correct_answer) {
           generalScore++;
