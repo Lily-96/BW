@@ -1,14 +1,14 @@
 const stars = document.querySelectorAll(".star");
 const ratingValue = document.getElementById("rating-value");
 
-stars.forEach((star) => {
+stars.forEach(star => {
   star.addEventListener("click", () => {
     const selectedValue = parseInt(star.getAttribute("data-value"));
 
-    stars.forEach((s) => {
+    stars.forEach(s => {
       s.classList.remove("selected");
     });
-    stars.forEach((s) => {
+    stars.forEach(s => {
       if (parseInt(s.getAttribute("data-value")) <= selectedValue) {
         s.classList.add("selected");
       }
@@ -19,9 +19,10 @@ stars.forEach((star) => {
 
 const feedbackInput = document.querySelector(".write input");
 const submitButton = document.getElementById("submit-button");
+feedbackInput.maxLength = 100;
 let selectedRating = 0;
 
-stars.forEach((star) => {
+stars.forEach(star => {
   star.addEventListener("click", () => {
     selectedRating = star.getAttribute("data-value");
     ratingValue.textContent = selectedRating;
