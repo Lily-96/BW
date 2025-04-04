@@ -54,8 +54,6 @@ if (difficulty === `easy` && length === `10`) {
   typeQuestions = easyQuestions;
 }
 
-console.log(typeQuestions);
-
 const allQuestions = () => {
   if (questionNumber >= typeQuestions.length) {
     window.location.href = "index.results.html";
@@ -121,10 +119,10 @@ const allQuestions = () => {
           generalScore++;
           localStorage.setItem(`finalScore`, generalScore);
           btn.classList.add("correct-answer");
-          console.log("Risposta corretta! Score:", generalScore);
+          console.log("Correct Answer! Score:", generalScore);
         } else {
           btn.classList.add("wrong-answer");
-          console.log("Risposta sbagliata! Score:", generalScore);
+          console.log("Wrong Answer! Score:", generalScore);
         }
 
         setTimeout(() => {
@@ -166,7 +164,7 @@ function updateTimer() {
 
       questionNumber++; // Aumenta il numero della domanda
       spanScore.innerText = questionNumber + 1; // Aggiorna il punteggio
-      console.log("Tempo scaduto! Score:", generalScore);
+      console.log("Time is over! Score:", generalScore);
       allQuestions(); // Vai alla prossima domanda
 
       return;
