@@ -20,6 +20,7 @@ body {
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   color: #e7e7eb;
 }
 img {
@@ -36,6 +37,14 @@ main {
   font-family: "Outfit", sans-serif;
   padding: 60px 100px;
 }
+.feed {
+  width: 100%;
+  padding-inline: 240px;
+  text-align: center;
+}
+.feedback {
+  text-align: center;
+}
 button {
   height: 60px;
   width: 190px;
@@ -51,9 +60,9 @@ button:hover {
   filter: drop-shadow(0 0 25px #00ffff);
 }
 hr {
-  width: 70%;
+  margin: 0;
+  width: 100%;
   border: solid 1px;
-  border: 1;
   color: #bd128a;
 }
 h1 {
@@ -66,7 +75,7 @@ h1 {
 }
 h3 {
   font-size: 1.8rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 .star {
   width: 66px;
@@ -105,7 +114,7 @@ textarea {
 
 .write {
   text-align: left;
-  padding-inline: 150px;
+  padding-left: 20px;
   width: 100%;
 }
 #more {
