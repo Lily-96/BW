@@ -1,14 +1,14 @@
 const stars = document.querySelectorAll(".star");
 const ratingValue = document.getElementById("rating-value");
 
-stars.forEach(star => {
+stars.forEach((star) => {
   star.addEventListener("click", () => {
     const selectedValue = parseInt(star.getAttribute("data-value"));
 
-    stars.forEach(s => {
+    stars.forEach((s) => {
       s.classList.remove("selected");
     });
-    stars.forEach(s => {
+    stars.forEach((s) => {
       if (parseInt(s.getAttribute("data-value")) <= selectedValue) {
         s.classList.add("selected");
       }
@@ -22,7 +22,7 @@ const submitButton = document.getElementById("submit-button");
 feedbackInput.maxLength = 100;
 let selectedRating = 0;
 
-stars.forEach(star => {
+stars.forEach((star) => {
   star.addEventListener("click", () => {
     selectedRating = star.getAttribute("data-value");
     ratingValue.textContent = selectedRating;
@@ -40,4 +40,10 @@ submitButton.addEventListener("click", () => {
   selectedRating = 0;
   ratingValue.textContent = "0";
   feedbackInput.value = "";
+});
+
+const logo = document.querySelector(`.logo`);
+
+logo.addEventListener(`click`, function () {
+  window.location.href = `welcome-page-index.html`;
 });
