@@ -70,7 +70,7 @@ button {
   border: 2px solid #eeeff1;
   border-radius: 55px;
   color: #eeeff1;
-  background-color: rgb(116 115 115 / 25%);
+  background-color: rgb(116 115 115 / 20%);
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
@@ -79,15 +79,15 @@ button {
 
 .hover:hover {
   background: rgb(196, 0, 143);
-  background: linear-gradient(rgba(196, 0, 143, 1) 0%, rgba(146, 0, 124, 1) 100%);
+  background: linear-gradient(#d20094), (#d90080);
 }
 
 .correct-answer {
-  background-color: green !important;
+  background: linear-gradient(rgb(2, 189, 27) 0%, rgb(0, 109, 54) 100%) !important;
 }
 
 .wrong-answer {
-  background-color: red !important;
+  background: linear-gradient(rgb(255, 3, 3) 0%, rgb(145, 2, 2) 100%) !important;
 }
 
 button.correct-answer:hover {
@@ -145,7 +145,7 @@ svg {
   fill: none;
   stroke: #00ffff;
   stroke-width: 16;
-  stroke-dasharray: 377; /* Circonferenza approssimativa */
+  stroke-dasharray: 377; /* Circonferenza */
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 0.1s linear;
 }
