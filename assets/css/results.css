@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #e7e7eb;
+  width: 100%;
+}
+
+img {
+  width: 220px;
+}
+
+.logo {
+  text-align: left;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+main {
+  text-align: center;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 50px;
+}
+.title {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+.title h1 {
+  font-size: 65px;
+  margin-bottom: 0;
+  line-height: 3.7rem;
+  margin-bottom: 1rem;
+}
+.title h3 {
+  font-size: 65px;
+  font-weight: 400;
+  margin: 0;
+}
+/* sezzioni prcentuale % */
+.false {
+  line-height: 65px;
+  text-align: center;
+
+  font-family: "Outfit", sans-serif;
+  width: 33%;
+  display: inline-block;
+  vertical-align: 15rem;
+}
+.true {
+  line-height: 65px;
+  text-align: center;
+
+  font-family: "Outfit", sans-serif;
+  width: 33%;
+  display: inline-block;
+  vertical-align: 15rem;
+}
+.false h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 65px;
+}
+.true h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 65px;
+}
+.results {
+  text-align: center;
+}
+.results p {
+  line-height: 35px;
+  font-size: large;
+  font-weight: 300;
+  margin: 0;
+}
+.results h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.rateUs {
+  text-align: center;
+}
+/* Contenitore centrale */
+.container #container {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  text-align: center;
+}
+.results {
+  width: 100%;
+  padding: 80px 0px;
+}
+#exam-result-container {
+  width: 100%;
+}
+/* Contenitore del grafico */
+.chart-container {
+  width: 33%;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+}
+
+/* Canvas per il grafico a cianbella */
+canvas {
+  width: 100%;
+
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+  filter: drop-shadow(2px 4px 6px rgba(7, 7, 7, 0.803));
+}
+.resultChart {
+  width: 33%;
+  display: inline-block;
+}
+
+#exam-result-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.response {
+  font-family: "Outfit", sans-serif;
+  overflow-wrap: break-word;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.response h5 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.response h6 {
+  color: #00f2ff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.response p {
+  line-height: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  color: #e7e7eb;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  height: 70px;
+  width: 260px;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Outfit", sans-serif;
+  transition: opacity 1s ease-out 1.5s;
+}
+button:hover {
+  background-color: #00ffff;
+  filter: drop-shadow(0 0 25px #00ffff);
+  color: #53176e;
+}

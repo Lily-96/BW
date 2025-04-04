@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e7e7eb;
+  background-attachment: fixed;
+}
+
+main {
+  margin-left: 6.5em;
+  margin-right: 6.5em;
+}
+
+/* Logo */
+img {
+  width: 220px;
+}
+
+.logo {
+  display: inline-block;
+  padding-top: 50px;
+  padding-bottom: 110px;
+  width: fit-content;
+  position: absolute;
+  top: 30px;
+  left: 140px;
+}
+
+/* Titles */
+.titles h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+  line-height: 4.7rem;
+  margin-bottom: 0;
+  margin-top: 10rem;
+  font-weight: 400;
+}
+
+.titles {
+  padding-top: 10rem;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+/* Questions Container and buttons */
+#questions-container {
+  text-align: center;
+}
+
+button {
+  margin: 15px 20px;
+  width: 450px;
+  height: 85px;
+  border: 2px solid #eeeff1;
+  border-radius: 55px;
+  color: #eeeff1;
+  background-color: rgb(116 115 115 / 20%);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.hover:hover {
+  background: #c00078;
+  background: linear-gradient(#d20094), (#d90080);
+}
+
+.correct-answer {
+  background: linear-gradient(rgb(2, 189, 27) 0%, rgb(0, 109, 54) 100%) !important;
+}
+
+.wrong-answer {
+  background: linear-gradient(rgb(255, 3, 3) 0%, rgb(145, 2, 2) 100%) !important;
+}
+
+.question-counter {
+  text-align: center;
+  padding-top: 7rem;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+#bold-text {
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 5rem;
+  line-height: 4.7rem;
+  margin-bottom: 0;
+}
+
+/* Timer */
+.container {
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  right: 140px;
+}
+
+.timer-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  font-family: "Outfit", sans-serif;
+}
+
+svg {
+  transform: rotate(-90deg); /* Questo fa partire il cerchio dall'alto */
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #896292;
+  stroke-width: 16;
+}
+
+.circle {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 16;
+  stroke-dasharray: 377; /* Circonferenza */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55px;
+  color: white;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Style and position for "SECONDS" and "REMAINING" */
+.timer-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.seconds-label {
+  top: 27%;
+  font-weight: 300;
+}
+
+.remaining-label {
+  top: 65%;
+  font-weight: 200;
+}
+
+.number-q {
+  color: #b51289;
+}

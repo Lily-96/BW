@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPkfTSbix4g4EPv42EinPjh0XLddeKySRbA&s" />
+    <link rel="stylesheet" href="assets/css/results.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Result Page</title>
+  </head>
+  <body>
+    <main class=>
+      <div class="logo">
+        <img src="./assets/img/epicode_logo.png" alt="logoEpicode" />
+      </div>
+      <div class="title">
+        <h1>Results</h1>
+        <h3>The summary of your answers:</h3>
+      </div>
+      <div class="container" id="container">
+        <div class="results" id="results">
+          <div class="true">
+            <!-- CORRECT -->
+            <h2>Correct</h2>
+            <h3 id="correct-percentage">0%</h3>
+            <p id="correct-answers">0/6 questions</p>
+          </div>
+          <!-- CIRCLE -->
+          <div class="chart-container">
+            <canvas id="resultChart"></canvas>
+            <!-- msg Congratulation! -->
+            <div id="exam-result-container">
+              <div class="response"></div>
+            </div>
+          </div>
+          <!-- WRONG -->
+          <div class="false">
+            <h2>Wrong</h2>
+            <h3 id="wrong-percentage">0%</h3>
+            <p id="wrong-answers">0/6 questions</p>
+          </div>
+        </div>
+        
+        <div class="rateUs">
+          <button>RATE US</button>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/results_script.js"></script>
+  </body>
+</html>
