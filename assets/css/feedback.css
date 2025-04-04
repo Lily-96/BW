@@ -37,13 +37,11 @@ main {
   font-family: "Outfit", sans-serif;
   padding: 60px 100px;
 }
-.feed {
-  width: 100%;
-  padding-inline: 240px;
-  text-align: center;
-}
+
 .feedback {
   text-align: center;
+  display: inline-block;
+  width: 100%;
 }
 button {
   height: 60px;
@@ -59,12 +57,7 @@ button:hover {
   background-color: #00ffff;
   filter: drop-shadow(0 0 25px #00ffff);
 }
-hr {
-  margin: 0;
-  width: 100%;
-  border: solid 1px;
-  color: #bd128a;
-}
+
 h1 {
   font-size: 60px;
   font-family: "outfit", sans-serif;
@@ -110,13 +103,18 @@ textarea {
   color: white;
   font-size: medium;
   outline: none;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
 .write {
   text-align: left;
   padding-left: 20px;
-  width: 100%;
+  border-bottom: 2px solid #bd128a;
+  width: 800px;
+  display: inline-block;
 }
+
 #more {
   margin-top: 10px;
 }
