@@ -29,6 +29,7 @@ main {
   margin-right: 6.5em;
 }
 
+/* Logo */
 img {
   width: 230px;
 }
@@ -43,6 +44,7 @@ img {
   left: 140px;
 }
 
+/* Titles */
 .titles h1 {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
@@ -58,13 +60,13 @@ img {
   text-align: center;
 }
 
+/* Questions Container */
 #questions-container {
   text-align: center;
 }
 
 button {
   margin: 15px 20px;
-  display: inline-block;
   width: 450px;
   height: 85px;
   border: 2px solid #eeeff1;
@@ -78,7 +80,7 @@ button {
 }
 
 .hover:hover {
-  background: rgb(196, 0, 143);
+  background: #c00078;
   background: linear-gradient(#d20094), (#d90080);
 }
 
@@ -88,14 +90,6 @@ button {
 
 .wrong-answer {
   background: linear-gradient(rgb(255, 3, 3) 0%, rgb(145, 2, 2) 100%) !important;
-}
-
-button.correct-answer:hover {
-  background-color: green;
-}
-
-button.wrong-answer:hover {
-  background-color: red;
 }
 
 .question-counter {
@@ -115,7 +109,7 @@ button.wrong-answer:hover {
   margin-bottom: 0;
 }
 
-/* timer to fix */
+/* Timer */
 .container {
   text-align: right;
   position: absolute;
@@ -161,7 +155,7 @@ svg {
   font-weight: 400;
 }
 
-/* Stile e posizionamento per le parole "SECONDS" e "REMAINING" */
+/* Style and position for "SECONDS" and "REMAINING" */
 .timer-label {
   position: absolute;
   left: 50%;
