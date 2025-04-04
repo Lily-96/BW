@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const length30 = document.querySelector(".length-btn30");
   const change = document.querySelector(".change");
 
+  change.innerText = "0-5 minutes.";
+
   easyBtn.addEventListener("click", function () {
     easyBtn.classList.add("selected");
     mediumBtn.classList.remove(`selected`);
