@@ -118,3 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "index.feedbackpage.html";
   });
 });
+
+const logo = document.querySelector(".logo");
+
+logo.addEventListener("click", function () {
+  window.location.href = "welcome-page-index.html";
+});
