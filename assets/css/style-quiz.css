@@ -22,6 +22,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #e7e7eb;
+  background-attachment: fixed;
 }
 
 main {
@@ -60,7 +61,7 @@ img {
   text-align: center;
 }
 
-/* Questions Container */
+/* Questions Container and buttons */
 #questions-container {
   text-align: center;
 }

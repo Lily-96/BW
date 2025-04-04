@@ -23,6 +23,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #e7e7eb;
+  background-attachment: fixed;
 }
 
 main {
@@ -37,7 +38,7 @@ img {
 
 .logo {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 
 /* Titles */
@@ -48,7 +49,7 @@ img {
 .titles h1,
 .titles h2 {
   font-family: "Outfit", sans-serif;
-  font-size: 60px;
+  font-size: 80px;
   margin-bottom: 0;
   line-height: 3.7rem;
 }
@@ -60,15 +61,15 @@ h1 {
 h3 {
   font-family: "Outfit", sans-serif;
   color: #c2128d;
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
 /* Instructions */
 .instructions {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .highlighted {
